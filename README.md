@@ -1,7 +1,9 @@
 # Portfolio-Website
 
-## Website pessoal para apresentação de portfolio
+## Bem vindo ao meu website pessoal!
 
+<p>Você encontrará um breve resumo sobre mim e minhas experiencias como desenvolvedor.</p>
+<br>
 <p>Feito por: Lincoln Corrêa Figueiredo Cruz</p>
 
 <a href="https://github.com/LincolnCFCruz">Github</a>

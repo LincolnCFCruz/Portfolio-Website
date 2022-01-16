@@ -6,23 +6,26 @@
 
 html {
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 
 body {
-    padding: 0;
-    margin: 0 auto;
     background: var(--bg-color);
+    padding: 0;
+    margin: 0;
 }
 
 .container {
-    margin: 0;
+    width: 90%;
+    margin: auto;
     font-family: "Source Code Pro", sans-serif;
-    min-height: 80vh;
     display: grid;
     place-content: center;
     text-align: center;
     background: var(--bg-color);
+}
+
+.landing{
+    margin-top: 10vh;
 }
 
 .landing h1{
@@ -88,6 +91,10 @@ body {
     color: white;
     margin: 15px;
 }
+.buttons {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
 
 .buttons a {
     -webkit-appearance: button;
@@ -115,9 +122,61 @@ body {
     color: darkblue;
 }
 
+.resume{
+    margin: auto;
+    width: 80%;
+    color: whitesmoke;
+}
+
+.conteudo-1 {
+    display: inline-flex;
+    width: 80%;
+    margin: 10vh auto;
+}
+.direito{
+    background-color: darkslategrey;
+    width: 50%;
+}
+
+.direito h2 {
+    color: whitesmoke;
+}
+
+.direito p1 {
+    color: white;
+}
+.direito p2 {
+    color: black;
+}
+
+.esquerdo {
+    background-color: mediumpurple;
+    width: 50%;
+}
+
+.esquerdo h2 {
+    color: whitesmoke;
+}
+
+.esquerdo p1 {
+    color: white;
+}
+.contato {
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
+
+.footer{
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
 @media screen and (max-width: 850px){
     .landing h1{
         font-size: clamp(1rem,1.5vw + 1rem,2rem);
+    }
+
+    .buttons {
+        margin-top: 10px;
     }
 
     .buttons a{
@@ -126,5 +185,17 @@ body {
 
     .content h2{
         font-size: 15px;
+    }
+
+    .conteudo-1{
+        width: 100%;
+        display: block;
+    }
+
+    .esquerdo {
+        width: 100%;
+    }
+    .direito{
+        width: 100%;
     }
 }
