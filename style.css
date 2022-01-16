@@ -1,0 +1,130 @@
+:root {
+    --bg-color: hsl(0 0% 10%);
+    --typewriterSpeed: 3s;
+    --typewriterCharacters:24;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    background: var(--bg-color);
+}
+
+.container {
+    margin: 0;
+    font-family: "Source Code Pro", sans-serif;
+    min-height: 80vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: var(--bg-color);
+}
+
+.landing h1{
+    margin: auto;
+    font-size: clamp(1rem,3vw + 1rem,4rem);
+    position: relative;
+    font-family: "Source Code Pro",monospace;
+    width: max-content;
+    color: hsl(0 0% 97%);
+}
+
+.landing h1::before,
+.landing h1::after {
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.landing h1::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+.landing h1::after {
+    width: .125em;
+    background: whitesmoke;
+    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(24) infinite;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+.landing .subtitle {
+    color: hsl(0 0% 99% / 0.8);
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 0.7s) forwards;
+}
+
+@keyframes fadeInUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content h2{
+    color: white;
+    margin: 15px;
+}
+
+.buttons a {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    text-decoration: none;
+    text-align: center;
+    width: 200px;
+    border:solid 3px mediumpurple;
+    color: whitesmoke;
+    padding: 10px 0;
+    border-radius: 7px;
+    background: rgba(255, 255, 255,0);
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.buttons a:hover {
+    color:mediumpurple;
+    box-shadow: 0 4px 20px 0 rgba(34,68,123,1);
+    transition: 0.2s;
+}
+
+.buttons:hover{
+    color: darkblue;
+}
+
+@media screen and (max-width: 850px){
+    .landing h1{
+        font-size: clamp(1rem,1.5vw + 1rem,2rem);
+    }
+
+    .buttons a{
+        margin-top: 10px;
+    }
+
+    .content h2{
+        font-size: 15px;
+    }
+}
